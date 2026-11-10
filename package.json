@@ -1,0 +1,22 @@
+{
+  "name": "staff-manager-bot-exiverse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Staff Manager Bot for the EXIVERSE Discord server",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "deploy:commands": "node src/register-commands.js",
+    "check": "node --check src/config.js && node --check src/db.js && node --check src/commands/ping.js && node --check src/register-commands.js && node --check src/index.js && node --check test/config.test.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "pg": "^8.12.0"
+  }
+}
